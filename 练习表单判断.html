@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <h1>{{ msg }}</h1> -->
+      <div>
+          <select v-model="comt">
+              <option value="A">王大爷的秋裤+10耐力</option>
+              <option value="B">王大爷的丝袜-无敌30年</option>
+              <option value="C">
+                  王大爷的拖鞋+攻击300
+              </option>
+              <option value="D">
+                  王大爷的假牙+吸血100%
+              </option>
+              <option value="E">
+                  王大爷的假发+智力250
+              </option>
+
+          </select>
+
+          <p v-show="comt == 'E'">E</p>
+          <p v-show="comt == 'D'">D</p>
+          <p v-show="comt == 'C'">C</p>
+          <p v-show="comt == 'B'">B</p>
+          <p v-show="comt == 'A'">A</p>
+
+          <input type="radio" v-model="comt" value="A">
+          <label for="">王大爷的秋裤+10耐力</label>
+          <input type="radio" v-model="comt" value="B">
+          <label for="">王大爷的丝袜-无敌30年</label>
+          <input type="radio" v-model="comt" value="C">
+          <label for="">王大爷的拖鞋+攻击300</label>
+          <input type="radio" v-model="comt" value="D">
+          <label for="">王大爷的假牙+吸血100%</label>
+          <input type="radio" v-model="comt" value="E">
+          <label for="">王大爷的假发+智力250</label>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        msg: "hello-vue",
+        comt:"A"
+      }
+    });
+  </script>
+</html>
+
